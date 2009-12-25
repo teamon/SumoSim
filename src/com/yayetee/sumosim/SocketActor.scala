@@ -5,7 +5,7 @@ import java.io.{OutputStreamWriter, PrintWriter, InputStreamReader, BufferedRead
 import actors.Actor
 
 class SocketActor(val socket: Socket) extends Actor {
-  Simulator ! ('addRobot, this)
+  Simulator ! AddRobot(this)
 
   val input = new BufferedReader(new InputStreamReader(socket.getInputStream))
   val output = new PrintWriter(new OutputStreamWriter(socket.getOutputStream))
@@ -13,14 +13,15 @@ class SocketActor(val socket: Socket) extends Actor {
   override def act {
     val line = input.readLine
     if (line == null) {
+      Simulator ! RemoveRobot(this)
       socket.close
       return
     }
 
-    Simulator ! ('updateRobot, this, line)
+    Simulator ! UpdateRobot(this, line)
     
     react {
-      case ('sendResponse, response: String) =>
+      case SendResponse(response) =>
         output.write(response)
         output.flush
         act

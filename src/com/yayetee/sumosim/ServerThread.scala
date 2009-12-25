@@ -2,7 +2,7 @@ package com.yayetee.sumosim
 
 import java.net.ServerSocket
 
-class ServerThread extends Thread {
+object ServerThread extends Thread {
   override def run {
     val serverSocket = new ServerSocket(30000)
     GUI.log("[INFO] Server started")

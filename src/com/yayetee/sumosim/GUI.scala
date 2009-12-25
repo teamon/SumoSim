@@ -4,8 +4,10 @@ import javax.swing.JFrame
 import java.awt.event.{WindowEvent, WindowAdapter}
 
 object GUI {
-    def main(args: Array[String]) {
-    (new ServerThread).start
+  def main(args: Array[String]) {
+    ServerThread.start
+    Simulator.start
+
     val dohyoFrame = new JFrame("Dohyo")
     val dohyoApplet = new Dohyo
     dohyoApplet.init
@@ -16,7 +18,7 @@ object GUI {
     dohyoFrame.setVisible(false)
     dohyoFrame.pack
     dohyoFrame.setVisible(true)
-    dohyoFrame.move(200, 0)
+    //dohyoFrame.move(200, 0)
   }
 
   def log(message: String) {
