@@ -7,6 +7,7 @@ class Dohyo extends PApplet {
   
   override def setup {
     size(K*200, K*160)
+    frameRate(30)
 
     rectMode(PConstants.CENTER)
     smooth
@@ -20,6 +21,7 @@ class Dohyo extends PApplet {
     drawDohyo
     var i = 0
     Simulator.robots.foreach(t => {
+      t._2.move
       drawRobot(t._2, i)
       i += 1      
     })
@@ -30,14 +32,26 @@ class Dohyo extends PApplet {
     pushMatrix
     translate(K*3, K*3)
     fill(255, 0, 0)
-    rotate(robot.angle)
-    translate(K*154*robot.x, K*154*robot.y)
+    rotate(robot.angle.toFloat)
+    translate(K*154*robot.x.toFloat, K*154*robot.y.toFloat)
     rect(0, 0, K*20, K*20)
     popMatrix
 
     // on panel
     pushMatrix
+    pushStyle
+    fill(255, 0, 0)
     rect(K*180, K*(index*25 + 15), K*20, K*20)
+    strokeWeight(1)
+    stroke(1)
+    rectMode(PConstants.CORNER)
+    fill(0.3f)
+    rect(K*172, K*(index*25 + 7), K*5, K*16)
+    rect(K*183, K*(index*25 + 7), K*5, K*16)
+    fill(0, 255, 0)
+    rect(K*172, K*(index*25 + 15 - 8*robot.motorLeft/100), K*5, K*8*robot.motorLeft/100)
+    rect(K*183, K*(index*25 + 15 - 8*robot.motorRight/100), K*5, K*8*robot.motorRight/100)
+    popStyle
     popMatrix
   }
 
