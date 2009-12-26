@@ -6,7 +6,9 @@ class Robot {
   var x = 0.5
   var y = 0.5
   var angle = 0.0
-
+  
+  var history = List((x, y))
+  
   var motorLeft = 0
   var motorRight = 0
 
@@ -33,7 +35,7 @@ class Robot {
       angle += beta
     }
 
-    println
+    history = (x,y) :: history
   }
 
   def onGround = {
