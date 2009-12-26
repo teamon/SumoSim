@@ -26,7 +26,7 @@ class Dohyo extends PApplet {
       i += 1      
     })
   }
-
+  
   def drawRobot(robot: Robot, index: Int) {
     // on dohyo
     pushMatrix
@@ -37,10 +37,10 @@ class Dohyo extends PApplet {
     rect(0, 0, K*20, K*20)
 
     fill(0, 255, 0)
-    rect(-K*7.5f, -K*7.5f, K*5, K*5)
-    rect(K*7.5f,  -K*7.5f, K*5, K*5)
-    rect(-K*7.5f, K*7.5f,  K*5, K*5)
-    rect(K*7.5f,  K*7.5f,  K*5, K*5)
+//    rect(-K*7.5f, -K*7.5f, K*5, K*5)
+//    rect(K*7.5f,  -K*7.5f, K*5, K*5)
+//    rect(-K*7.5f, K*7.5f,  K*5, K*5)
+//    rect(K*7.5f,  K*7.5f,  K*5, K*5)
     popMatrix
 
     // on panel
