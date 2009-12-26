@@ -5,17 +5,18 @@ import Math._
 class Robot {
   var x = 0.5
   var y = 0.5
-  var angle = 0.0
+  var angle = Pi/2
 
   var motorLeft = 0
   var motorRight = 0
 
-  val T = 0.00005
+  val T = 0.0001
   val D = 0.13
 
 
   def move {
-    val diff = (motorLeft - motorRight).toFloat
+    val diff = (motorRight - motorLeft).toFloat
+
     if(diff == 0){
       val s = motorLeft * T
       x += -s * sin(angle)
@@ -30,6 +31,8 @@ class Robot {
 
       angle += beta
     }
+
+    println
   }
 
   def parseMessage(message: String) = {

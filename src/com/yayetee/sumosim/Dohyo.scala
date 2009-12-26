@@ -32,9 +32,15 @@ class Dohyo extends PApplet {
     pushMatrix
     translate(K*3, K*3)
     fill(255, 0, 0)
-    rotate(robot.angle.toFloat)
     translate(K*154*robot.x.toFloat, K*154*robot.y.toFloat)
+    rotate(robot.angle.toFloat)
     rect(0, 0, K*20, K*20)
+
+    fill(0, 255, 0)
+    rect(-K*7.5f, -K*7.5f, K*5, K*5)
+    rect(K*7.5f,  -K*7.5f, K*5, K*5)
+    rect(-K*7.5f, K*7.5f,  K*5, K*5)
+    rect(K*7.5f,  K*7.5f,  K*5, K*5)
     popMatrix
 
     // on panel

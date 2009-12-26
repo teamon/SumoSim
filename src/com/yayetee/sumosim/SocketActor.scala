@@ -22,7 +22,7 @@ class SocketActor(val socket: Socket) extends Actor {
     
     react {
       case SendResponse(response) =>
-        output.write(response)
+        output.println(response)
         output.flush
         act
     }
