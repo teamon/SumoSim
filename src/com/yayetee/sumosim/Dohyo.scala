@@ -1,6 +1,17 @@
 package com.yayetee.sumosim
 
 import processing.core.{PConstants, PApplet}
+import javax.swing.JFrame
+
+class DohyoFrame extends JFrame {
+  val applet = new Dohyo
+  applet.init
+  getContentPane.add(applet)
+
+  pack
+  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+  setVisible(true)
+}
 
 class Dohyo extends PApplet {
   val K = 3

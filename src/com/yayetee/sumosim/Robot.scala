@@ -26,7 +26,7 @@ class Robot {
       y += s * cos(angle)
     } else {
       val beta = diff * T / D
-      var r = ((if(motorLeft > motorRight) motorLeft else motorRight) / diff) * D
+      var r = ((if (motorLeft > motorRight) motorLeft else motorRight) / diff) * D
       r += D / 2
 
       x += -r * (cos(angle) - cos(angle + beta))

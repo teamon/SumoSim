@@ -2,7 +2,7 @@ package com.yayetee.sumosim
 
 import java.io.{OutputStreamWriter, PrintWriter, InputStreamReader, BufferedReader}
 import actors.Actor
-import java.net.{SocketException, Socket}
+import java.net.{Socket}
 
 class SocketActor(val socket: Socket) extends Actor {
   Simulator ! AddRobot(this)

@@ -2,8 +2,6 @@ package com.yayetee.sumosim
 
 import javax.swing.JFrame
 import java.awt.event.{WindowEvent, WindowAdapter}
-import java.net.Socket
-
 object GUI {
   def main(args: Array[String]) {
     ServerThread.start
@@ -19,7 +17,6 @@ object GUI {
     dohyoFrame.setVisible(false)
     dohyoFrame.pack
     dohyoFrame.setVisible(true)
-    //dohyoFrame.move(200, 0)
   }
 
   def log(message: String) {
