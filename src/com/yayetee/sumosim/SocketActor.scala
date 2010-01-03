@@ -1,8 +1,8 @@
 package com.yayetee.sumosim
 
-import java.net.Socket
 import java.io.{OutputStreamWriter, PrintWriter, InputStreamReader, BufferedReader}
 import actors.Actor
+import java.net.{SocketException, Socket}
 
 class SocketActor(val socket: Socket) extends Actor {
   Simulator ! AddRobot(this)
@@ -11,22 +11,30 @@ class SocketActor(val socket: Socket) extends Actor {
   val output = new PrintWriter(new OutputStreamWriter(socket.getOutputStream))
 
   override def act {
-    val line = input.readLine
-    if (line == null) {
-      Simulator ! RemoveRobot(this)
-      socket.close
-      return
+    try {
+      val line = input.readLine
+      if (line == null) {
+        Simulator ! RemoveRobot(this)
+        socket.close
+        return
+      }
+
+      Simulator ! UpdateRobot(this, line)
+
+      react {
+        case SendResponse(response) =>
+          output.println(response)
+          output.flush
+          act
+      }
+    } catch {
+      case e: SocketException =>
+        Simulator ! RemoveRobot(this)
+        socket.close
+        return
     }
 
-    Simulator ! UpdateRobot(this, line)
-    
-    react {
-      case SendResponse(response) =>
-        output.println(response)
-        output.flush
-        act
-    }
-    
+
   }
 
 }

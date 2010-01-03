@@ -2,6 +2,7 @@ package com.yayetee.sumosim
 
 import javax.swing.JFrame
 import java.awt.event.{WindowEvent, WindowAdapter}
+import java.net.Socket
 
 object GUI {
   def main(args: Array[String]) {
@@ -22,6 +23,6 @@ object GUI {
   }
 
   def log(message: String) {
-    println(message)
+    //println(message)
   }
 }

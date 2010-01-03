@@ -28,6 +28,7 @@ class Dohyo extends PApplet {
   }
 
   def drawRobot(robot: Robot, index: Int) {
+    pushMatrix
     translate(K * 3, K * 3)
 
     // history
@@ -35,7 +36,6 @@ class Dohyo extends PApplet {
     robot.history.foreach(t => ellipse(K * 154 * t._1.toFloat, K * 154 * t._2.toFloat, K * 0.7f, K * 0.7f))
 
     // on dohyo
-    pushMatrix
     fill(255, 0, 0)
     translate(K * 154 * robot.x.toFloat, K * 154 * robot.y.toFloat)
     rotate(robot.angle.toFloat)
@@ -44,28 +44,29 @@ class Dohyo extends PApplet {
     // ground sensors
     fill(0, 255, 0)
     val ground = robot.onGround
-    if (ground(0)) rect(-K * 7.5f, K * 7.5f, K * 5, K * 5)
-    if (ground(1)) rect(K * 7.5f, K * 7.5f, K * 5, K * 5)
-    if (ground(2)) rect(-K * 7.5f, -K * 7.5f, K * 5, K * 5)
-    if (ground(3)) rect(K * 7.5f, -K * 7.5f, K * 5, K * 5)
+    if (ground(0)) rect(K * 7.5f, K * 7.5f, K * 5, K * 5)
+    if (ground(1)) rect(-K * 7.5f, K * 7.5f, K * 5, K * 5)
+    if (ground(2)) rect(K * 7.5f, -K * 7.5f, K * 5, K * 5)
+    if (ground(3)) rect(-K * 7.5f, -K * 7.5f, K * 5, K * 5)
     popMatrix
 
     // on panel
     pushMatrix
     pushStyle
     fill(255, 0, 0)
-    rect(K * 180, K * (index * 25 + 15), K * 20, K * 20)
+    rectMode(PConstants.CORNER)
+    rect(K * 165, K * (index * 35 + 5), K * 30, K * 30)
     strokeWeight(1)
     stroke(1)
-    rectMode(PConstants.CORNER)
     fill(0.3f)
-    rect(K * 172, K * (index * 25 + 7), K * 5, K * 16)
-    rect(K * 183, K * (index * 25 + 7), K * 5, K * 16)
+    rect(K * 168, K * (index * 35 + 8), K * 5, K * 24)
+    rect(K * 187, K * (index * 35 + 8), K * 5, K * 24)
     fill(0, 255, 0)
-    rect(K * 172, K * (index * 25 + 15 - 8 * robot.motorLeft / 100), K * 5, K * 8 * robot.motorLeft / 100)
-    rect(K * 183, K * (index * 25 + 15 - 8 * robot.motorRight / 100), K * 5, K * 8 * robot.motorRight / 100)
+    rect(K * 168, K * (index * 35 + 20 - 12 * robot.motorLeft / 100), K * 5, K * 12 * robot.motorLeft / 100)
+    rect(K * 187, K * (index * 35 + 20 - 12 * robot.motorRight / 100), K * 5, K * 12 * robot.motorRight / 100)
     popStyle
     popMatrix
+
   }
 
   def drawPanel {

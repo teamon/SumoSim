@@ -5,10 +5,10 @@ import Math._
 class Robot {
   var x = 0.5
   var y = 0.5
-  var angle = 0.0
-  
+  var angle = Pi
+
   var history = List((x, y))
-  
+
   var motorLeft = 0
   var motorRight = 0
 
@@ -18,7 +18,7 @@ class Robot {
 
 
   def move {
-    val diff = (motorRight - motorLeft).toFloat
+    val diff = (motorLeft - motorRight).toFloat
 
     if (diff == 0) {
       val s = motorLeft * T
@@ -26,7 +26,7 @@ class Robot {
       y += s * cos(angle)
     } else {
       val beta = diff * T / D
-      var r = (motorLeft / diff) * D
+      var r = ((if(motorLeft > motorRight) motorLeft else motorRight) / diff) * D
       r += D / 2
 
       x += -r * (cos(angle) - cos(angle + beta))
@@ -35,15 +35,15 @@ class Robot {
       angle += beta
     }
 
-    history = (x,y) :: history
+    history = (x, y) :: history
   }
 
   def onGround = {
     val a = D * cos(angle) / 2
     val b = D * sin(angle) / 2
 
-    List((x - a - b, y + a - b), (x + a - b, y + a + b),
-      (x - a + b, y - a - b), (x + a + b, y - a + b)).map(t => touchesLine(t._1, t._2))
+    List((x + a - b, y + a + b), (x - a - b, y + a - b),
+      (x + a + b, y - a + b), (x - a + b, y - a - b)).map(t => touchesLine(t._1, t._2))
   }
 
   def touchesLine(x: Double, y: Double) = pow(x - 0.5, 2) + pow(y - 0.5, 2) >= R2
