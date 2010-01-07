@@ -3,17 +3,22 @@ package com.yayetee.sumosim
 import processing.core.{PConstants, PApplet}
 import javax.swing.JFrame
 
-class DohyoFrame extends JFrame {
-  val applet = new Dohyo
-  applet.init
-  getContentPane.add(applet)
+object Dohyo extends JFrame {
+  val applet = new DohyoApplet
 
-  pack
-  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
-  setVisible(true)
+  def init {
+    applet.init
+    getContentPane.add(applet)
+
+    pack
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+    setVisible(true)
+  }
+
+  def draw = applet.draw
 }
 
-class Dohyo extends PApplet {
+class DohyoApplet extends PApplet {
   val K = 3
 
   override def setup {
@@ -24,18 +29,14 @@ class Dohyo extends PApplet {
     smooth
     noStroke
     colorMode(PConstants.RGB, 1.0f)
+    noLoop
   }
 
   override def draw {
     background(0.3f)
     drawPanel
     drawDohyo
-    var i = 0
-    Simulator.robots.foreach(t => {
-      t._2.move
-      drawRobot(t._2, i)
-      i += 1
-    })
+    Simulator.robots.toList.zipWithIndex.foreach(e => drawRobot(e._1, e._2))
   }
 
   def drawRobot(robot: Robot, index: Int) {

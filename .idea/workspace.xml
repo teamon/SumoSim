@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="ed49de89-affb-42c0-b8c6-da611ba66862" name="Default" comment="" />
-    <ignored path=".idea/workspace.xml" />
     <ignored path="SumoSim.iws" />
+    <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,16 @@
       <file leaf-file-name="SumoSim.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+            <state line="8" column="2" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Simulator.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="8" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,7 +81,7 @@
       <file leaf-file-name="Dohyo.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="1" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+            <state line="20" column="6" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,16 +90,7 @@
       <file leaf-file-name="GUI.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/GUI.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="31" selection-start="538" selection-end="538" vertical-scroll-proportion="0.6905371">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocketActor.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/SocketActor.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="31" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
+            <state line="12" column="24" selection-start="329" selection-end="329" vertical-scroll-proportion="0.41284403">
               <folding />
             </state>
           </provider>
@@ -110,13 +110,13 @@
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/MainWindow.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/SocketThread.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/ServerThread.scala" />
+        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala" />
+        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/GUI.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/SocketActor.scala" />
-        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/ControlPanel.scala" />
-        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala" />
-        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/GUI.scala" />
+        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala" />
       </list>
     </option>
   </component>
@@ -156,7 +156,7 @@
     </navigator>
     <panes>
       <pane id="Favorites" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,7 +195,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,9 +211,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -392,22 +392,22 @@
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="22" width="1126" height="721" extended-state="0" />
+    <frame x="26" y="22" width="1221" height="719" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22328548" sideWeight="0.9978118" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2224" sideWeight="0.9978118" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294606" sideWeight="0.7689487" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18570103" sideWeight="0.6682616" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32057416" sideWeight="0.9990715" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17064847" sideWeight="0.7424" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2464" sideWeight="0.99087137" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -453,49 +453,47 @@
         <state line="4" column="36" selection-start="95" selection-end="95" vertical-scroll-proportion="0.10016695" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="436" selection-end="442" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="51" selection-start="760" selection-end="760" vertical-scroll-proportion="0.4490818">
-          <folding />
-        </state>
+        <state line="41" column="51" selection-start="760" selection-end="760" vertical-scroll-proportion="0.4490818" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/SocketActor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/ControlPanel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="126" selection-end="126" vertical-scroll-proportion="0.15345268">
+        <state line="9" column="68" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+        <state line="8" column="2" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="8" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="1" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+        <state line="20" column="6" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/GUI.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="31" selection-start="538" selection-end="538" vertical-scroll-proportion="0.6905371">
+        <state line="12" column="24" selection-start="329" selection-end="329" vertical-scroll-proportion="0.41284403">
           <folding />
         </state>
       </provider>
