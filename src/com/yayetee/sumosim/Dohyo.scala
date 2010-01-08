@@ -29,14 +29,13 @@ class DohyoApplet extends PApplet {
     smooth
     noStroke
     colorMode(PConstants.RGB, 1.0f)
-    noLoop
   }
 
   override def draw {
     background(0.3f)
     drawPanel
     drawDohyo
-    Simulator.robots.toList.zipWithIndex.foreach(e => drawRobot(e._1, e._2))
+    Simulator.robots.toList.zipWithIndex.foreach(e => drawRobot(e._1._2, e._2))
   }
 
   def drawRobot(robot: Robot, index: Int) {

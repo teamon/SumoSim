@@ -1,7 +1,7 @@
 package com.yayetee.sumosim
 
 import swing._
-import swing.event._
+import event.{ValueChanged, ButtonClicked}
 import java.awt.Point
 
 object SumoSim extends SimpleGUIApplication {
@@ -27,7 +27,7 @@ object SumoSim extends SimpleGUIApplication {
     listenTo(startButton, stepButton, resetButton, speedSlider)
     reactions += {
       case ButtonClicked(`startButton`) => {
-        if(Simulator.running){
+        if (Simulator.running) {
           Simulator.stop
           startButton.text = "Start"
         } else {
