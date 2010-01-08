@@ -4,54 +4,48 @@ import collection.mutable.ArrayBuffer
 
 object Simulator {
   val robots = new ArrayBuffer[Robot]
-  var running = false
+  var speed = 10
+  @volatile var sim = new Simulator
+
+  def waitTime = (100 - speed) * 10
+
+  def running = sim.running
 
   def start {
-    running = true
-    while(running){
-      step
-//      Thread.sleep(10);
-    }
+    sim.running = true
+    if (!sim.isAlive) sim.start
   }
 
-  def step {
+  def step {sim.step}
 
-  }
-
-  def stop {
-    running = false
-  }
+  def stop {sim.running = false}
 
   def reset {
-
+    val keep_running = sim.running
+    sim.interrupt
+    sim.join
+    sim = new Simulator
+    if (keep_running) start
   }
 }
 
 
-//case class AddRobot(socket: SocketActor)
-//case class UpdateRobot(socket: SocketActor, message: String)
-//case class RemoveRobot(socket: SocketActor)
-//case class SendResponse(response: String)
+class Simulator extends Thread {
+  var running = false
 
-//object Simulator extends Actor {
-//  val robots = Map[SocketActor, Robot]()
-//
-//  def act {
-//    loop {
-//      receive {
-//        case AddRobot(socket) =>
-//          GUI.log("[INFO] Robot added " + socket)
-//          robots += socket -> new Robot
-//
-//        case UpdateRobot(socket, message) =>
-//          val response = robots(socket).parseMessage(message)
-//          GUI.log("[INFO] >> " + message)
-//          GUI.log("[INFO] << " + response)
-//          socket ! SendResponse(response)
-//
-//        case RemoveRobot(socket) =>
-//          robots - socket
-//      }
-//    }
-//  }
-//}
+  override def run {
+    try {
+      while (true) {
+        if (running) step
+        Thread.sleep(Simulator.waitTime);
+      }
+    } catch {
+      case _ =>
+    }
+
+  }
+
+  def step {
+    
+  }
+}

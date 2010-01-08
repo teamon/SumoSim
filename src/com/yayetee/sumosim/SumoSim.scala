@@ -1,12 +1,13 @@
 package com.yayetee.sumosim
 
 import swing._
-import event.{ValueChanged, ButtonClicked}
+import swing.event._
 import java.awt.Point
 
 object SumoSim extends SimpleGUIApplication {
   Dohyo.init
-  
+  ServerThread.start
+
   def top = new MainFrame {
     title = "Control panel"
     location = new Point(602, 0)
@@ -17,6 +18,7 @@ object SumoSim extends SimpleGUIApplication {
     val speedSlider = new Slider {
       min = 0
       max = 100
+      value = Simulator.speed
       majorTickSpacing = 20
       paintTicks = true
       paintLabels = true
@@ -24,10 +26,18 @@ object SumoSim extends SimpleGUIApplication {
 
     listenTo(startButton, stepButton, resetButton, speedSlider)
     reactions += {
-      case ButtonClicked(`startButton`) => Simulator.start
+      case ButtonClicked(`startButton`) => {
+        if(Simulator.running){
+          Simulator.stop
+          startButton.text = "Start"
+        } else {
+          Simulator.start
+          startButton.text = "Stop"
+        }
+      }
       case ButtonClicked(`stepButton`) => Simulator.step
       case ButtonClicked(`resetButton`) => Simulator.reset
-      case ValueChanged(`speedSlider`) => println(speedSlider.value)
+      case ValueChanged(`speedSlider`) => Simulator.speed = speedSlider.value
     }
 
     contents = new BoxPanel(Orientation.Vertical) {
