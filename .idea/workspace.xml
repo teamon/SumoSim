@@ -60,46 +60,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SumoSim.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="8" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerThread.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/ServerThread.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="67" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Robot.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Robot.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dohyo.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="6" selection-start="344" selection-end="344" vertical-scroll-proportion="0.3325688">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Simulator.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="7" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+            <state line="50" column="26" selection-start="1100" selection-end="1100" vertical-scroll-proportion="1.7201835">
               <folding />
             </state>
           </provider>
@@ -117,7 +81,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Server.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/MainWindow.scala" />
-        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/GUI.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/ControlPanel.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala" />
@@ -126,6 +89,7 @@
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/ServerThread.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala" />
+        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala" />
       </list>
     </option>
   </component>
@@ -483,16 +447,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
+        <state line="18" column="9" selection-start="336" selection-end="336" vertical-scroll-proportion="0.26376146">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="6" selection-start="344" selection-end="344" vertical-scroll-proportion="0.3325688">
+        <state line="50" column="26" selection-start="1100" selection-end="1100" vertical-scroll-proportion="1.7201835">
           <folding />
         </state>
       </provider>

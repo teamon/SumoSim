@@ -2,7 +2,7 @@ package com.yayetee.sumosim
 
 import Math._
 
-class Robot {
+class  Robot {
   var x = 0.5
   var y = 0.5
   var angle = Pi
@@ -26,8 +26,7 @@ class Robot {
       y += s * cos(angle)
     } else {
       val beta = diff * T / D
-      var r = ((if (motorLeft > motorRight) motorLeft else motorRight) / diff) * D
-      r += D / 2
+      var r = D * (((if (motorLeft > motorRight) motorLeft else motorRight) / diff) + (signum(diff) / 2))
 
       x += -r * (cos(angle) - cos(angle + beta))
       y += r * (sin(angle + beta) - sin(angle))
