@@ -17,9 +17,9 @@ object SumoSim extends SimpleGUIApplication {
     val resetButton = new Button {text = "Reset"}
     val speedSlider = new Slider {
       min = 0
-      max = 100
+      max = 10
       value = Simulator.speed
-      majorTickSpacing = 20
+      majorTickSpacing = 1
       paintTicks = true
       paintLabels = true
     }

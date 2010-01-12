@@ -1,21 +1,25 @@
 package com.yayetee.sumosim
 
-import collection.mutable.ArrayBuffer
-import java.net.Socket
 import java.io.{BufferedReader, InputStreamReader, PrintWriter, OutputStreamWriter}
+import collection.mutable.ListBuffer
+import java.net.{SocketException, Socket}
 
 object Simulator {
-  val robots = new ArrayBuffer[(SocketWrapper, Robot)]
-  var speed = 10
+  val robots = new ListBuffer[(SocketWrapper, Robot)]
+  var speed = 1
   @volatile var sim = new Simulator
 
-  def waitTime = (201 - speed)/8
+  def waitTime = Math.pow(2, 10 - speed).toInt
 
   def running = sim.running
 
   def start {
-    sim.running = true
-    if (!sim.isAlive) sim.start
+    try {
+      sim.running = true
+      if (!sim.isAlive) sim.start
+    } catch {
+      case e: IllegalThreadStateException => reset
+    }
   }
 
   def stop {sim.running = false}
@@ -34,18 +38,24 @@ object Simulator {
 
   def step {
     robots.foreach(t => {
-      val socket = t._1
-      val line = socket.input.readLine
-      if (line == null) {
-        socket.close
-        //robots.remove(t)
-      } else {
+      val s = t._1
+      try {
+        val line = s.input.readLine
+        if (line == null) throw new SocketException
+
         val robot = t._2
         val response = robot.parseMessage(line)
         robot.move
-        socket.output.println(response)
-        socket.output.flush
+        s.output.println(response)
+        s.output.flush
+      } catch {
+        case e: SocketException => {
+          s.socket.close
+          robots -= t
+        }
+
       }
+
     })
   }
 }
@@ -69,5 +79,4 @@ class Simulator extends Thread {
 class SocketWrapper(val socket: Socket) {
   val input = new BufferedReader(new InputStreamReader(socket.getInputStream))
   val output = new PrintWriter(new OutputStreamWriter(socket.getOutputStream))
-  def close = socket.close
 }

@@ -60,10 +60,28 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Robot.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala">
+      <file leaf-file-name="Simulator.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="26" selection-start="1100" selection-end="1100" vertical-scroll-proportion="1.7201835">
+            <state line="5" column="2" selection-start="192" selection-end="192" vertical-scroll-proportion="0.17201835">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SumoSim.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="26" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dohyo.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="21" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,13 +101,13 @@
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/MainWindow.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/GUI.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/ControlPanel.scala" />
-        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/SocketActor.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/SocketThread.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/ServerThread.scala" />
-        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala" />
-        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala" />
         <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala" />
+        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala" />
+        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala" />
+        <option value="$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala" />
       </list>
     </option>
   </component>
@@ -381,7 +399,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17064847" sideWeight="0.7424" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2464" sideWeight="0.99087137" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2464" sideWeight="0.99087137" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -426,20 +444,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="8" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/ServerThread.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="67" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
@@ -447,16 +451,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="9" selection-start="336" selection-end="336" vertical-scroll-proportion="0.26376146">
+        <state line="16" column="28" selection-start="239" selection-end="239" vertical-scroll-proportion="0.41284403">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Robot.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/SumoSim.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="26" selection-start="1100" selection-end="1100" vertical-scroll-proportion="1.7201835">
+        <state line="21" column="26" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Dohyo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="21" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yayetee/sumosim/Simulator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="2" selection-start="192" selection-end="192" vertical-scroll-proportion="0.17201835">
           <folding />
         </state>
       </provider>
